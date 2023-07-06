@@ -1,4 +1,4 @@
-const {asyncHandler} = require('express-async-handler')
+const asyncHandler = require('express-async-handler')
 
 // @desc Get goals
 // @route GET /api/goals
@@ -28,7 +28,7 @@ const updateGoal = asyncHandler(async (req, res) => {
 // @desc Delete goal
 // @route DELETE /api/goal/:id
 // @access Private
-const deleteGoal = asyncHanlder(async (req, res) => {
+const deleteGoal = asyncHandler(async (req, res) => {
     res.status(200).json({ message: `Delete goals ${req.params.id}` })
 })
 
